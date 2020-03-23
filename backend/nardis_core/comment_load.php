@@ -18,29 +18,29 @@ $result = mysqli_query($conn, $sql);
 
 while($row = mysqli_fetch_array($result)){
   //<li><a href=\"index.php?id=19\">Mysql</a></li>
-$tmp = $row['name'].' : '.$row['description'];
+//$tmp = $row['name'].' : '.$row['description'];
 $comment = "
-  <div class='existingComm'>
-      <div class='eachComm'>
-          <div class='existingProfileSection'>
-              <a></a>
-          </div>
-          <div class='existingCommSection'>
-              <div class='speech-bubble'>
-                  <p>{$tmp}</p>
-              </div>
-          </div>
-          <div></div>
-          <div class='love-or-replies'>
-              <div></div>
-              <div class='btn-group-xs'>
-                  <button type='button' class='btn btn-primary'>Love</button>
-                  <button type='button' class='btn btn-primary disabled'>View Replies</button>
-                  <button type='button' class='btn btn-primary'>Reply</button>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class='eachComm'>
+    <div class='existingProfileSection'>
+        <a href='https://facebook.com'><img src='/images/get_started48.png' class=profilePic'></a>
+    </div>
+    <div class='existingCommSection'>
+        <div class='name-in-comment'>
+            <p>{$row['name']}</p>
+        </div>
+        <div class='comment-bubble'>
+            <p>{$row['description']}</p>
+        </div>
+        <div class='love-or-replies'>
+            <div></div>
+            <div class='btn-group-sm'>
+                <button type='button' class='btn btn-primary btn-sm'>Love</button>
+                <button type='button' class='btn btn-primary btn-sm'>View Replies</button>
+                <button type='button' class='btn btn-primary btn-sm'>Reply</button>
+            </div>
+        </div>
+    </div>
+</div>
   ";
   echo $comment;
 }
