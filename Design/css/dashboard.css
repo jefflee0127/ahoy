@@ -53,6 +53,10 @@ header img {
 .url-name {
     word-break: keep-all;
 }
+.url-name:hover {
+    background-color: rgba(0, 255, 255, 0.3);
+    box-shadow: 1px 1px 2px 2px gray inset;
+}
 .website-thumbnail {
     height: 50px;
 }
