@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PopUp</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script href="/js/bootstrap.min.js"></script>
+        <script href="/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="/css/popup_not.css">
+        <script href"/js/popup.js"></script>
+    </head>
+
+    <body>
+        <div class="container" id="content">
+            <header>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="popup.html">Public</a></li>
+                        <li class="breadcrumb-item"><a href="popup_com_pri.html">Private</a></li>
+                    </ol>
+                </div>
+                <div>
+                    <div class="top-button noti-button">
+                        <a href="popup_com_pub.html"><button type="button" class="btn btn-info" name="button">Comment</button></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="top-button home-button">
+                        <a href="signUp.html" target="_blank"><button type="button" class="btn btn-info" name="button" id="testID">home</button></a>
+                    </div>
+                </div>
+            </header>
+            <div class="notifications">
+                <table class="table">
+                    <tbody id="alertarea">
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </body>
+    <script src="alertload.js"></script>
+</html>
