@@ -1,4 +1,4 @@
-@font-face {
+button@font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 200;
@@ -81,18 +81,18 @@ table tr {
   height: 100%;
   margin-top: -194.5px;
   overflow: hidden;
+  z-index: -1;
 }
 .wrapper.form-success .container h2 {
   -webkit-transform: translateY(85px);
           transform: translateY(85px);
 }
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 80px 0;
-  padding-top: 20px;
-  height: 400px;
-  text-align: center;
+    margin:0;
+    padding:0;
+    width:inherit;
+    height: inherit;
+    text-align: center;
 }
 .container h2 {
   font-size: 40px;
@@ -101,9 +101,6 @@ table tr {
   -webkit-transition-timing-function: ease-in-put;
           transition-timing-function: ease-in-put;
   font-weight: 200;
-}
-.container2 {
-    margin-top:-200px;
 }
 form {
   padding: 20px 0;
@@ -185,7 +182,7 @@ form button:hover{
   color:#1AAB8A;
   box-shadow: 1px 1px 5px 5px rgba(100, 100, 100, 0.4);
 }
-form button:before,button:after{
+form button:before, button:after{
   content:'';
   position:absolute;
   top:0;
@@ -201,7 +198,7 @@ form button:after{
   left:0;
   bottom:0;
 }
-form button:hover:before,button:hover:after{
+form button:hover:before, button:hover:after{
   width:100%;
   transition:800ms ease all;
 }

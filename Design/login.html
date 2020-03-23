@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/css/bg.css">
+        <link rel="stylesheet" href="/css/style.css">
         <script src="/js/bg.js"></script>
     </head>
     <body>
@@ -25,7 +25,13 @@
                     <a href="https://namu.wiki"><button type="submit" id="login-button">Login</button></a>
                 <br>
                 <h2>If you don't have an account,</h2>
-                <a href="signUp.html"><button class="button" id="signUpHere-button">Sign Up Here</button></a>
+                <a href="signUp.html" class="button" id="signUpHere-button">Sign Up Here</a>
+                <button type="button" name="button" onclick="newpage('http://google.com');"></button>
+                <script>
+                    function newpage(url) {
+                        window.location=url;
+                    }
+                </script>
                 </form>
             </div>
 
