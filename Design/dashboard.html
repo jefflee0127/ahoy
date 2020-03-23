@@ -4,46 +4,113 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dashboard</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/css/style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <link rel="stylesheet" href="/css/dashboard.css">
         <script src="/js/bg.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="container">
-                <header>
-                    <img class="nardis-img" src="/images/NARDIS.png">
-                </header>
-            </div>
-            <div class="container2">
-                <div class="col-sm-6" style="background-color:black">
-                    <table class="table table-hover">
-                        <thead>
-                            <th></th>
-                        </thead>
+        <div class="container">
+            <header>
+                <div class="col-sm-2">
+                    <img src="/images/NARDIS.png" alt="">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-4 search-bar">
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="Search.." id="search-box" name="search">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+
+                <div class="left-menu col-sm-2">
+                    <table class="table menu-table">
+                        <thead></thead>
                         <tr>
-                            <td>My Friends</td>
+                            <td class="menu">My menu</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">All Comments</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">All Public Comments</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">All Private Comments</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">기능4</td>
+                        </tr>
+                        <tr>
+                            <td class="menu">Social Menu</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">My profile</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">Friends List</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">소셜기능3</td>
+                        </tr>
+                        <tr>
+                            <td class="non-menu">소셜기능4</td>
                         </tr>
                     </table>
                 </div>
-                <div class="col-sm-6">
-                    <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>Website</th>
-                            <th>Time</th>
-                            <th>My Comment</th>
-                          </tr>
+                <div class="mid-menu folders col-sm-5">
+                    <table>
+                        <thead class="blue lighten-4">
+                            <th><p>Sort by</p>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Website
+                                    <span class="caret"></span></button>
+                                    <div class="dropdown-menu">
+                                      <a href="#">Folder</a>
+                                      <a href="#">Number of Likes</a>
+                                      <a href="#">JavaScript</a>
+                                  </div>
+                                </div>
+                            </th>
                         </thead>
-                          <tr>
-                            <td><a href="https://new.chosun.com">news.chosun.com</a></td>
-                            <td>3/22 12:00:00</td>
-                            <td>I love president Moon</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        <tr>
+                            <td class="url-name">asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf </td>
+                            <td><img href="" class="website-thumbnail"></td>
+                        </tr>
+                        <tr>
+                            <td class="url-name">asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf </td>
+                            <td><img href="" class="website-thumbnail"></td>
+                        </tr>
+                        <tr>
+                            <td class="url-name">asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf </td>
+                            <td><img href="" class="website-thumbnail"></td>
+                        </tr>
+                        <tr>
+                            <td class="url-name">asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdf asdfasdf asdfasdfasdf </td>
+                            <td><img href="" class="website-thumbnail"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="right-menu col-sm-5">
+
                 </div>
             </div>
         </div>
