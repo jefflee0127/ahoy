@@ -52,7 +52,7 @@ if(count($row)==0){ //만약에 없으면 새로 삽입 + 그 아이디랑
            '{$msg}',
             NOW(),
            '{$row['id']}',
-           '{$POST_['link']}'
+           '{$_POST['link']}'
         )
     ";
     mysqli_query($conn, $sql);

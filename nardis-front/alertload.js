@@ -19,6 +19,7 @@ function getAlert() {
               //console.log(data);
             };
             hr.send(info);
+            notifs = document.getElementsByName('notif');
   });
 
 }
@@ -34,5 +35,7 @@ chrome.storage.sync.get(['name'], function(result) {
 });
 
 getAlert();
+
 var notifs = document.getElementsByName('notif');
 console.log(notifs);
+console.log(notifs.length);

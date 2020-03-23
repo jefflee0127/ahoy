@@ -13,7 +13,7 @@ while($row = mysqli_fetch_array($result)){//<li><a href=\"index.php?id=19\">Mysq
 $msg = $row['notif_msg'];
 $alert = "
 <tr>
-  <td name='notif' value='hello'><a href=\"{$row['link']}\">$msg}</a></td>
+  <td name='notif' value='hello'><a href=\"{$row['link']}\" target=\"_blank\">{$msg}</a></td>
 </tr>
 ";
 echo $alert;
