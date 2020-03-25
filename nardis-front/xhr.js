@@ -68,7 +68,6 @@ chrome.windows.getCurrent(function(w) {
 }
 
 
-
 function sendPost(){
   chrome.windows.getCurrent(function(w) {
     chrome.tabs.getSelected(w.id,
@@ -107,7 +106,6 @@ function sendPost(){
   hr.send(info);
   */
 }
-
 
 
 //getBtn.addEventListener('click', getData);

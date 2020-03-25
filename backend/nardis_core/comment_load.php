@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 $index = $row[0];
 
-$sql = "SELECT * from comment LEFT JOIN userdata ON comment.author_id = userdata.u_id WHERE link_Id=$index";
+$sql = "SELECT * from comment LEFT JOIN userdata ON comment.author_id = userdata.u_id WHERE link_Id=$index ORDER BY comment.id DESC";
 $result = mysqli_query($conn, $sql);
 
 

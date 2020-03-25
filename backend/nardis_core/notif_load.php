@@ -1,6 +1,6 @@
 <?php
 $conn = mysqli_connect('localhost', 'root', 'cw6y9m','mention');
-$sql = "SELECT * from notif WHERE username='{$_POST['id']}'";
+$sql = "SELECT * from notif WHERE username='{$_POST['id']}' ORDER BY id DESC";
 //$sql = "SELECT * from link";
 //echo $sql;
 $result = mysqli_query($conn, $sql);
