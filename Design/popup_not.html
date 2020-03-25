@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <script href="/js/bootstrap.min.js"></script>
         <script href="/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="/css/popup_not.css">
+        <link rel="stylesheet" href="/css/popup.css">
         <script href"/js/popup.js"></script>
     </head>
 
@@ -14,41 +14,50 @@
         <div class="container" id="content">
             <header>
                 <div>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="popup_com_pub.html">Public</a></li>
+                    <!-- <ul class="breadcrumb">
+                        <li class="breadcrumb-item">Public</li>
                         <li class="breadcrumb-item"><a href="popup_com_pri.html">Private</a></li>
-                    </ol>
-                </div>
-                <div>
-                    <div class="top-button noti-button">
-                        <a href="popup_com_pub.html"><button type="button" class="btn btn-info" name="button">Comment</button></a>
+                    </ul> -->
+                    <div class="top-button my-account">
+                        <a href="dashboard.html" target="_blank">
+                            <button type="button" class="btn" name="button">Ytheus</button>
+                        </a>
                     </div>
                 </div>
                 <div>
-                    <div class="top-button home-button">
-                        <a href="signUp.html" target="_parent"><button type="button" class="btn btn-info" name="button">home</button></a>
+                    <div class="top-button noti-button">
+                        <a href="popup_com_pub.html">
+                            <button type="button" class="btn" name="button">Comments</button>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="top-button log-out-button">
+                        <a href="signUp.html" target="_blank">
+                            <button type="button" class="btn" name="button">Log Out</button>
+                        </a>
                     </div>
                 </div>
             </header>
             <div class="notifications">
-                <table class="table">
+                <table class="table table-hover">
                     <tbody>
-                      <tr>
-                        <td>프사1</td>
-                        <td>동재원님이 </td>
-                        <td>어디 사이트에 뭐라뭐라 했습니다</td>
-                      </tr>
-                      <tr>
-                        <td>프사2</td>
-                        <td>예성준님이 </td>
-                        <td><a href="https://google.com" target="_blank">어디 asdf 뭐라뭐라 했습니다</a></td>
-                      </tr>
-                      <tr>
-                        <td>프사3</td>
-                        <td>이덕행님이 </td>
-                        <td>어디 사이트에 뭐라뭐라 했습니다</td>
-                      </tr>
-                    </tbody>
+                        <tr>
+                            <td><a href=""><img src="/images/get_started48.png" class="profilePic"></a></td>
+                            <td><a href="">누가뭘함</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><img src="/images/get_started48.png" class="profilePic"></a></td>
+                            <td><a href="">누가뭐라함</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><img src="/images/get_started48.png" class="profilePic"></a></td>
+                            <td><a href="">누가뭘함</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><img src="/images/get_started48.png" class="profilePic"></a></td>
+                            <td><a href="">누가언급함</a></td>
+                        </tr>
                   </table>
             </div>
         </div>

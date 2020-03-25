@@ -3,7 +3,7 @@ body {
     padding:none;
     width: 400px;
     overflow: scroll;
-    background-color: #2b303b;
+    background-image: linear-gradient(to bottom right, white , #eeeeee);
 }
 header {
     position: fixed;
@@ -12,7 +12,7 @@ header {
     height: 40px;
     background-color: rgba(255, 255, 255, 0);
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-columns: 134px 133px 133px;
     text-align: center;
     z-index: 100;
 }
@@ -20,7 +20,7 @@ footer {
     position: fixed;
     bottom:0px;
     width: 100%;
-    height: 100px;
+    height: 70px;
     background-color: white;
     z-index: 100;
 }
@@ -37,16 +37,10 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #65c069;
 }
-textarea {
-    min-height: 80px;
-    max-height: 80px;
-}
 .container {
     margin: 0;
     padding: 0;
-}
-.pub {
-    background-color: #80ded0;
+
 }
 .breadcrumb {
     text-align: center;
@@ -57,19 +51,40 @@ textarea {
 }
 header .top-button {
     height: 40px;
-    width: 100%;
+    width: inherit;
 }
 header .top-button .btn {
     height:100%;
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 0px 2px 2px 2px gray;
+    background-image: linear-gradient(to bottom right, white , #eeeeee);
+}
+header .top-button .btn:hover {
+    background-image: linear-gradient(to bottom right, black , #222222);
+    color: white;
 }
 
+.notifications {
+    padding-top: 50px;
+}
+.notifications tr {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
 .existingComm {
     padding: 50px 5px 100px 5px;
 }
-.eachComm {
+.not-reply {
     display: grid;
     grid-template-columns: 35px 1fr;
     padding: 5px;
+}
+.reply {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    padding: 5px;
+    padding-left : 40px;
 }
 .existingProfileSection {
     display: grid;
@@ -105,6 +120,11 @@ header .top-button .btn {
     width: 100%;
     height: auto;
 }
+.notifications .profilePic {
+    border-radius: 20%;
+    width: auto;
+    height: 30px;
+}
 .commentSection {
     padding: 5px;
     padding-left: none;
@@ -114,32 +134,37 @@ header .top-button .btn {
     color: pink;
     border-radius: 5px;
 }
-.commentBox {
+#my-comment-box {
     border-radius: 10px;
     display: inline;
     margin-right: 5px;
-    height: 100%;
+    height: 50px;
 }
 .enterBox {
     text-align: center;
+    height: 50px;
     font-size: 11px;
 }
 
 .comment-bubble {
-	background: #CCCCCC;
+	background: #eeeeee;
 	border-radius: .4em;
+    border: 0.5px solid black;
     width: 100%;
     height: 100%;
     padding: 10px;
     padding-bottom: 0;
-    min-height: 10px;
 
 }
 .ellip {
-		white-space:nowrap;
-		overflow:hidden;
-		text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
 }
 p {
     margin-bottom:10px;
+}
+a, a:hover {
+    color: black;
+    text-decoration: none;
 }
