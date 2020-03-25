@@ -3,50 +3,36 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nardis Log In</title>
+        <title>Nardis Sign In</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/signin.css">
         <script src="/js/bg.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="container">
-                <header>
-                    <img class="nardis-img" src="/images/NARDIS.png">
-                </header>
+        <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active"> Sign In </h2>
+            <a href="signUp.html"><h2 class="inactive underlineHover">Sign Up </h2></a>
 
-                <h2>Welcome</h2>
+            <!-- Login Form -->
+            <form>
+              <input type="email" id="login" class="fadeIn second" name="login" placeholder="email" required>
+              <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" required>
+              <br><input type="checkbox" id="remember-box">
+              <label for="remeber-box">Remeber me</label> <br>
+              <input type="submit" class="fadeIn fourth" value="Log In" onclick="location.href=''">
+            </form>
 
-                <form class="form">
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <a href="https://namu.wiki"><button type="submit" id="login-button">Login</button></a>
-                <br>
-                <h2>If you don't have an account,</h2>
-                <a href="signUp.html" class="button" id="signUpHere-button">Sign Up Here</a>
-                <button type="button" name="button" onclick="newpage('http://google.com');"></button>
-                <script>
-                    function newpage(url) {
-                        window.location=url;
-                    }
-                </script>
-                </form>
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+              <a class="underlineHover" href="#">Forgot Password?</a>
+              <p>Copyright 2020. Nardis. All Rights Reserved</p>
             </div>
 
-            <ul class="bg-bubbles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+          </div>
         </div>
     </body>
 </html>

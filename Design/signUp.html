@@ -3,49 +3,37 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nardis Sign Up</title>
+        <title>Nardis Sign In</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/signin.css">
         <script src="/js/bg.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="container">
-                <header>
-                    <img class="nardis-img" src="/images/NARDIS.png">
-                </header>
+        <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <!-- Tabs Titles -->
+            <a href="login.html"><h2 class="inactive underlineHover"> Sign In </h2></a>
+            <h2 class="active"> Sign Up </h2>
 
-                <h2>Sign Up</h2>
+            <!-- Login Form -->
+            <form>
+                <input type="text" id="usename" class="fadeIn second" name="signup" placeholder="username" required>
+                <input type="email" id="login" class="fadeIn second" name="signup" placeholder="email" required>
+                <input type="password" id="password" class="fadeIn third" name="signup" placeholder="password" required>
+                <input type="password" id="password2" class="fadeIn third" name="signup" placeholder="retype password" required>
+                <br><input type="checkbox" id="agree-box" required>
+                <label for="agree-box">Agree to the Terms of Service</label> <br>
+                <button type="submit" class="fadeIn fourth" onclick="location.href='login.html'"> Sign Up</button>
+            </form>
 
-                <form class="form">
-                    <input type="button" class="signup-go btn-3">Google</input><br>
-                    <input type="button" class="signup-fb btn-3">Facebook</input><br>
-                    <input type="button" class="signup-tw btn-3">Twitter</input><br>
-                    <button type="submit" class="signup-tw btn-3" onclick="window.location.href='http://google.com'">Email</button>
-                    <br>
-                    <br>
-                    <h2>If you have an account, </h2>
-                    <a type="button" href="login.html" class="button">asdf</a>
-
-
-
-                </form>
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <p>Copyright 2020. Nardis. All Rights Reserved</p>
             </div>
 
-            <ul class="bg-bubbles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+          </div>
         </div>
     </body>
 </html>
