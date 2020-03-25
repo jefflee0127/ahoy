@@ -24,19 +24,28 @@
     <body>
         <div class="container">
             <header>
-                <div class="col-sm-2">
+                <div class="col-sm-2 logo">
+                    <div></div>
                     <img src="/images/NARDIS.png" alt="">
                 </div>
                 <div class="col-sm-6">
+                    <div class="wrap">
+                       <div class="search">
+                          <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                          <button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
+                         </button>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
 
                 </div>
-                <div class="col-sm-4 search-bar">
-                    <div class="col-sm-9">
-                        <input type="text" placeholder="Search.." id="search-box" name="search">
-                    </div>
-                    <div class="col-sm-3">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </div>
+                <div class="col-sm-1 support">
+                    <br>Support
+                </div>
+                <div class="col-sm-1 logout">
+                    <br> <a href="login.html">Log Out</a>
                 </div>
             </header>
             <div class="content">
@@ -55,9 +64,10 @@
                         </tr>
                     </table>
                 </div>
+
                 <div class="mid-menu col-sm-5">
                     <table class="friends-table">
-                        <thead class="blue lighten-4">
+                        <thead>
                             <th>My Friends</th>
                         </thead>
                         <tr>
@@ -244,7 +254,7 @@
                 </div>
                 <div class="right-menu col-sm-5">
                     <table class="friends-table">
-                        <thead class="blue lighten-4">
+                        <thead>
                             <th>Explore</th>
                             <th class="friend-search">
                                 <input type="text" placeholder="Search.." id="friend-search-box" name="search">

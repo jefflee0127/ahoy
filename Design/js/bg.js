@@ -105,3 +105,7 @@ var LoginModalController = {
 $(document).ready(function() {
     LoginModalController.initialize();
 });
+
+$('.search-button').click(function(){
+  $(this).parent().toggleClass('open');
+});
