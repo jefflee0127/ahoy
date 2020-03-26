@@ -45,6 +45,9 @@ header img {
     padding-top: 60px;
 }
 
+thead {
+    background-color: #eeeeee;
+}
 .left-menu {
     box-shadow: 3px 0px 5px gray;
     padding-bottom: 100%;

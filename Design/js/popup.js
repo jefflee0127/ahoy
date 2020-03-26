@@ -4,17 +4,20 @@ function resize(obj) {
   obj.style.height = (12+obj.scrollHeight)+"px";
 }
 
-function viewToggle(self) {
-    if (self.value==="view-replies")
+function viewToggle(asdf) {
+    if (asdf.value==="view-replies")
     {
-        self.innerText="Hide Replies";
-        self.value="hide-replies";
-        self.css("background-color", 'black');
-        self.html("asdfasdf");
-        $('.reply1').css('display', none);
+        asdf.innerText="Hide Replies";
+        asdf.value="hide-replies";
+        getElementById("reply2").style.display="box";;
     }
     else {
-        self.textContent="View Replies";
-        self.value="view-replies";
+        asdf.textContent="View Replies";
+        asdf.value="view-replies";
+        getElementById("reply2").css('display', "none");
     }
+}
+
+function replyToggle() {
+    document.getElementById("reply-or-not").style.display="box";
 }
