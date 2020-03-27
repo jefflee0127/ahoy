@@ -117,12 +117,9 @@ thead {
 .url-name:hover {
     box-shadow: 1px 1px 2px 2px gray inset;
 }
-.website-thumbnail {
-    height: 50px;
-}
 .my-friends-menu .friends-profile {
-    height: 50px;
-    width: 50px;
+
+    /* width: 100%; */
 }
 
 
@@ -178,4 +175,7 @@ thead {
 
 .profile-table table {
     margin:10%;
+}
+#my-prof-pic {
+    width:100px;
 }
