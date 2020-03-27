@@ -74,7 +74,7 @@
                     <table>
                         <thead>
                             <th style="padding: 5px;">Sort by
-                                <div class="dropdown" style="display:inline;">
+                                <div class="dropdown" style="display:inline; margin-left:10px;">
                                     <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Website
                                     <span class="caret"></span></button>
                                     <div class="dropdown-menu">
@@ -83,29 +83,19 @@
                                         <a href="#">Tag</a>
                                   </div>
                                 </div>
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Dropdown button
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">Action</a>
-                                      <a class="dropdown-item" href="#">Another action</a>
-                                      <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                  </div>
                             </th>
                         </thead>
                         <tr>
-                            <td class="url-name active-table"> www.google.com </td>
+                            <td class="url-name" id="active-table" onclick="activateTable(this);"> www.google.com </td>
                         </tr>
                         <tr>
-                            <td class="url-name"> www.namu.wiki </td>
+                            <td class="url-name" onclick="activateTable(this);"> www.namu.wiki </td>
                         </tr>
                         <tr>
-                            <td class="url-name"> www.ilbe.com</td>
+                            <td class="url-name" onclick="activateTable(this);"> www.ilbe.com</td>
                         </tr>
                         <tr>
-                            <td class="url-name"> www.minjok.hs.kr </td>
+                            <td class="url-name" onclick="activateTable(this);"> www.minjok.hs.kr </td>
                         </tr>
                     </table>
                 </div>
@@ -133,8 +123,6 @@
                     </table>
                 </div>
             </div>
-
-            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         </div>
     </body>
 </html>

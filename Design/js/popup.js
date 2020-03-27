@@ -9,12 +9,12 @@ function viewToggle(asdf) {
     {
         asdf.innerText="Hide Replies";
         asdf.value="hide-replies";
-        getElementById("reply2").style.display="box";;
+        getElementById("reply2").style.display="box";
     }
     else {
         asdf.textContent="View Replies";
         asdf.value="view-replies";
-        getElementById("reply2").css('display', "none");
+        getElementById("reply2").style.display="none";
     }
 }
 
