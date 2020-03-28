@@ -58,8 +58,10 @@ header .top-button .btn {
     height:100%;
     width: 100%;
     border: 1px solid black;
-    box-shadow: 0px 2px 2px 2px gray;
-    background-image: linear-gradient(to bottom right, white , #eeeeee);
+    /* box-shadow: 0px 2px 2px 2px gray; */
+    /* background-image: linear-gradient(to bottom right, white , #eeeeee); */
+    background-color: white;
+    border-radius: 0;
 }
 header .top-button .btn:hover {
     background-image: linear-gradient(to bottom right, black , #222222);
