@@ -1,6 +1,6 @@
 <html>
 <?php
-  $conn = mysqli_connect("localhost:3307", "root", "123456", "accountdata");
+  $conn = mysqli_connect("localhost:3307", "root", "cw6y9m", "mention");
   $sql = "
     INSERT INTO user_relation (
         relatingUserID,

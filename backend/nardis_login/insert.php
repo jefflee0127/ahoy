@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-  $conn = mysqli_connect("localhost", "root", "cw6y9m", "mention");
+  $conn = mysqli_connect("localhost:3307", "root", "cw6y9m", "mention");
   $sql = "
     INSERT INTO userdata (
         id,

@@ -12,8 +12,8 @@
       $conn = mysqli_connect(
         'localhost:3307',
         'root',
-        '123456',
-        'accountdata');
+        'cw6y9m',
+        'mention');
         $sql = "SELECT * FROM userdata";
         $result = mysqli_query($conn, $sql);
 

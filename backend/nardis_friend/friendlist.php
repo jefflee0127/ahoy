@@ -11,8 +11,8 @@
       $conn = mysqli_connect(
         'localhost:3307',
         'root',
-        '123456',
-        'accountdata');
+        'cw6y9m',
+        'mention');
         $sql = "SELECT * FROM user_relation WHERE relatingUserID = '{$_SESSION['id']}' AND isAccepted = '1'";
         $result = mysqli_query($conn, $sql);
 

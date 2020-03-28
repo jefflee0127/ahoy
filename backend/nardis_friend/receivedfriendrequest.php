@@ -12,8 +12,8 @@
       $conn = mysqli_connect(
         'localhost:3307',
         'root',
-        '123456',
-        'accountdata');
+        'cw6y9m',
+        'mention');
         $sql = "SELECT * FROM user_relation WHERE relatedUserID = '{$_SESSION['id']}' AND isAccepted = 0";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
@@ -26,6 +26,11 @@
             <input type="hidden" name = "relatedUserID" value = "<?php echo $row['relatingUserID']?>">
             <input type="hidden" name = "isAccepted" value = "1">
             <input type="submit" value = "Accept Request">
+          </form>
+          <form method="post" action="friendreject.php">
+            <input type="hidden" name = "relatingUserID" value = "<?php echo $row['relatingUserID']?>">
+            <input type="hidden" name = "relatedUserID" value = "<?php echo $_SESSION['id']?>">
+            <input type="submit" value = "Reject Request">
           </form>
           </li></p>
         <?php

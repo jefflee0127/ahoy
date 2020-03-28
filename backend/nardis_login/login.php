@@ -46,6 +46,7 @@
           <br><br><br>
           <h2>If you don't have an account,<br>
           <a href="signup.php">Sign Up Here</a></h2>
+          <a href = "signup.php">here</a>
       </div>
 
       <ul class="bg-bubbles">
