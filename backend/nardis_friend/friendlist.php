@@ -20,7 +20,14 @@
           $sql2 = "SELECT * FROM userdata WHERE id = '{$row['relatedUserID']}'";
           $result2 = mysqli_query($conn, $sql2);
           $row2 = mysqli_fetch_array($result2);
-          echo "<p><li>".$row2['name']."</li></p>";
+          echo "<p><li>".$row2['name'];?>
+          <form method="post" action="frienddelete.php">
+            <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
+            <input type="hidden" name = "relatedUserID" value = "<?php echo $row['relatedUserID']?>">
+            <input type="submit" value = "unfriend">
+          </form>
+          </li></p>
+        <?php
         }
       ?>
       </ol>
