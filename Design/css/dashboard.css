@@ -64,19 +64,16 @@ thead {
     box-shadow: 1px 1px 2px 2px gray inset;
 }
 .mid-menu {
-    overflow: scroll;
     height: inherit;
     padding-right:0;
     border-right: black solid 1px;
 }
 .right-menu {
-    overflow: scroll;
     height: inherit;
 }
 .friends-table tr {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    overflow: scroll;
 }
 .friends-table td {
     display: grid;
