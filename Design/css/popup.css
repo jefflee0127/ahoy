@@ -187,3 +187,9 @@ a, a:hover {
 textarea {
     font-size: 15px;
 }
+.notifications .read{
+    background-color: #dddddd;
+}
+.notifications .unread {
+    background-color: white;
+}
