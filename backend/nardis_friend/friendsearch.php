@@ -16,7 +16,8 @@
         'mention');
         $sql = "
           SELECT * FROM userdata u
-            WHERE u.id NOT IN (SELECT r.relatedUserID FROM user_relation r WHERE (relatingUserID = '{$_SESSION['id']}' AND isAccepted = 1) OR (relatedUserID = '{$_SESSION['id']}' AND isAccepted = 1))";
+            WHERE u.id NOT IN (SELECT r.relatedUserID FROM user_relation r WHERE (relatingUserID = '{$_SESSION['id']}' AND isAccepted = 1) OR (relatedUserID = '{$_SESSION['id']}' AND isAccepted = 1))
+            AND u.id != '{$_SESSION['id']}'";
         $result = mysqli_query($conn, $sql);
 
         while($row = mysqli_fetch_array($result)) {

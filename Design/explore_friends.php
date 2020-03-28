@@ -60,13 +60,13 @@
                             <td class="non-menu" id="all-comments"> <a href="dashboard.html">All Comments</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="friends-list"><a href="friends_list.html">Me and My Friends</a></td>
+                            <td class="non-menu" id="friends-list"><a href="friends_list.php">Me and My Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu active-table" id="explore-friends"> <a href="explore_friends.html">Explore Friends</a></td>
+                            <td class="non-menu active-table" id="explore-friends"> <a href="explore_friends.php">Explore Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="requests"> <a href="requests.html">Friend Requests</a></td>
+                            <td class="non-menu" id="requests"> <a href="requests.php">Friend Requests</a></td>
                         </tr>
                     </table>
                 </div>
@@ -79,63 +79,65 @@
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </th>
                         </thead>
+                        <?php
+                        session_start();
+                        $conn = mysqli_connect(
+                          'localhost:3307',
+                          'root',
+                          'cw6y9m',
+                          'mention');
+                          $sql = "
+                            SELECT * FROM userdata u
+                              WHERE u.id NOT IN (SELECT r.relatedUserID FROM user_relation r WHERE (relatingUserID = '{$_SESSION['id']}' AND isAccepted = 1) OR (relatedUserID = '{$_SESSION['id']}' AND isAccepted = 1))
+                              AND u.id != '{$_SESSION['id']}'";
+                          $result = mysqli_query($conn, $sql);
+                        while($row = mysqli_fetch_array($result)) { ?>
                         <tr>
                             <td>
                                 <a href="#"><img src="./images/get_started.png" class="friends-profile">
                                 <div class="friend-name">
-                                    <a href="https://google.com">Ytheus</a>
+                                    <a href="https://google.com"><?php echo $row['name']; ?></a>
                                 </div>
                                 <div class="buttons">
                                     <div class="add-friend">
-                                        <button type="button" name="button">Add</button>
-                                    </div>
-                                    <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
-                                    </div>
-                                    <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <img src="./images/get_started.png" class="friends-profile">
-                                <div class="friend-name">
-                                    Ytheus
-                                </div>
-                                <div class="buttons">
-                                    <div class="add-friend">
-                                        <button type="button" name="button">Add</button>
-                                    </div>
-                                    <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
-                                    </div>
-                                    <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="./images/get_started.png" class="friends-profile">
-                                <div class="friend-name">
-                                    Ytheus
-                                </div>
-                                <div class="buttons">
-                                    <div class="add-friend">
-                                        <button type="button" name="button">Add</button>
-                                    </div>
-                                    <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
-                                    </div>
-                                    <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                      <form method="post" action="../backend/nardis_friend/friendrequest.php">
+                                        <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
+                                        <input type="hidden" name = "relatedUserID" value = "<?php echo $row['id']?>">
+                                        <input type="hidden" name = "isAccepted" value = "0">
+                                        <button type="submit" name="button">Send Request</button>
+                                      </form>
+
                                     </div>
                                 </div>
                             </td>
 
-                        </tr>
+                        <?php
+                        if($row = mysqli_fetch_array($result)) { ?>
 
+                              <td>
+                                  <a href="#"><img src="./images/get_started.png" class="friends-profile">
+                                  <div class="friend-name">
+                                      <a href="https://google.com"><?php echo $row['name']; ?></a>
+                                  </div>
+                                  <div class="buttons">
+                                      <div class="add-friend">
+                                        <form method="post" action="../backend/nardis_friend/friendrequest.php">
+                                          <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
+                                          <input type="hidden" name = "relatedUserID" value = "<?php echo $row['id']?>">
+                                          <input type="hidden" name = "isAccepted" value = "0">
+                                          <button type="submit" name="button">Send Request</button>
+                                        </form>
+                                      </div>
+                                  </div>
+                              </td>
+
+                        <?php
+                        }
+                        ?>
+                      </tr>
+                      <?php
+                      }
+                      ?>
                     </table>
                 </div>
             </div>
