@@ -12,5 +12,12 @@
             "16": "images/get_started.png"
         }
     },
-    "permissions": ["activeTab"]
+    "permissions": [
+        "activeTab",
+        "notifications"
+    ],
+    "background" : {
+        "scripts" : ["./js/index.js"],
+        "persistent": false
+    }
 }
