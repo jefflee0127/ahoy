@@ -16,8 +16,8 @@
         "activeTab",
         "notifications"
     ],
-    "background" : {
-        "scripts" : ["./js/index.js"],
+    "background": [
+        "scripts": ["./js/background.js"],
         "persistent": false
-    }
+    ]
 }

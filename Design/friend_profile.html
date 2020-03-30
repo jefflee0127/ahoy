@@ -2,21 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dashboard</title>
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
 
         <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+        <script src="./jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="./css/fontawesome.min.css">
 
         <link rel="stylesheet" href="./css/dashboard.css">
         <script src="./js/bg.js"></script>
@@ -24,28 +20,27 @@
     <body>
         <div class="container">
             <header>
-                <div class="col-sm-2 logo">
-                    <div></div>
-                    <img src="/images/NARDIS.png" alt="">
+                <div class="col-sm-2 logo-part">
+                    <img src="./images/pornhub.svg" class="logo">
                 </div>
                 <div class="col-sm-6">
-                    <div class="wrap">
+                    <!-- <div class="wrap">
                        <div class="search">
                           <input type="text" class="searchTerm" placeholder="What are you looking for?">
                           <button type="submit" class="searchButton">
                             <i class="fa fa-search"></i>
                          </button>
                        </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
 
                 </div>
                 <div class="col-sm-1 support">
-                    <br><a href="">Support</a>
+                    <br> <a href="">Support</a>
                 </div>
                 <div class="col-sm-1 logout">
-                    <br> <a href="login.html">Log Out</a>
+                    <br> <a href="logout.php">Log Out</a>
                 </div>
             </header>
             <div class="content">
@@ -71,7 +66,7 @@
                     </table>
                 </div>
                 <div class="right-menu col-sm-5">
-                    <table class="profile-table">
+                    <table class="table profile-table">
                         <thead>
                             <th>Ytheus's Profile</th>
                             <th></th>
@@ -118,7 +113,7 @@
                     </table>
                 </div>
                 <div class="right-menu col-sm-5">
-                    <table class="friends-table">
+                    <table class="table friends-table">
                         <thead>
                             <th style="padding-top:7px; padding-bottom:7px;">
                                 <div class="dropdown">
@@ -135,181 +130,231 @@
                         </thead>
                         <tr>
                             <td>
-                                <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
+                                    <div></div>
                                     <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
+                                    <div></div>
                                 </div>
                             </td>
                             <td>
-                                <img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
-                                    Ytheus
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
+                                    <div></div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
-                                    Ytheus
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
+                                    <div></div>
                                 </div>
                             </td>
                             <td>
-                                <img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
-                                    Ytheus
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td onclick="location.href='https://google.com'">
-                                <img src="/images/get_started.png" class="friends-profile">
-                                <div class="friend-name">
-                                    Ytheus
-                                </div>
-                                <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
-                                    <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
-                                    </div>
-                                    <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <img src="/images/get_started.png" class="friends-profile">
-                                <div class="friend-name">
-                                    Ytheus
-                                </div>
-                                <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
-                                    <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
-                                    </div>
-                                    <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
-                                    </div>
+                                    <div></div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
-                                    Ytheus
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
+                                    <div></div>
                                 </div>
                             </td>
                             <td>
-                                <img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
-                                    Ytheus
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
+                                    <div></div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
-                                    Ytheus
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
+                                    <div></div>
                                 </div>
                             </td>
                             <td>
-                                <img src="/images/get_started.png" class="friends-profile">
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
                                 <div class="friend-name">
-                                    Ytheus
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
                                 </div>
                                 <div class="buttons">
-                                    <div class="delete-friend">
-                                        <button type="button" name="button">Delete</button>
-                                    </div>
+                                    <div></div>
                                     <div class="block-friend">
-                                        <button type="button" name="button">Block</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
                                     </div>
                                     <div class="report-friend">
-                                        <button type="button" name="button">Report</button>
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
                                     </div>
+                                    <div></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
+                                <div class="friend-name">
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
+                                </div>
+                                <div class="buttons">
+                                    <div></div>
+                                    <div class="block-friend">
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    </div>
+                                    <div class="report-friend">
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    </div>
+                                    <div></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="friend-profile-section">
+                                    <div></div>
+                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                    <div></div>
+                                </div>
+                                <div class="friend-name">
+                                    <div></div>
+                                    <a href="friend_profile.html">Ytheus</a>
+                                    <div></div>
+                                </div>
+                                <div class="buttons">
+                                    <div></div>
+                                    <div class="block-friend">
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    </div>
+                                    <div class="report-friend">
+                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    </div>
+                                    <div></div>
                                 </div>
                             </td>
                         </tr>
