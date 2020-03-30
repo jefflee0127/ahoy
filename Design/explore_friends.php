@@ -26,7 +26,7 @@
             <header>
                 <div class="col-sm-2 logo">
                     <div></div>
-                    <img src="./images/NARDIS.png" alt="">
+                    <img src="./images/logo.png" alt="">
                 </div>
                 <div class="col-sm-6">
                     <div class="wrap">
