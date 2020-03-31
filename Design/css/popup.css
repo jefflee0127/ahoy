@@ -134,20 +134,23 @@ header .top-button .btn:hover {
     padding: 5px;
     padding-left: none;
     display: grid;
-    grid-template-columns: 1fr 40px;
+    grid-template-columns: 1fr 45px;
     border: none;
     border-radius: 5px;
 }
 #my-comment-box {
     border-radius: 10px;
     display: inline;
-    margin-right: 5px;
-    height: 50px;
 }
 .enterBox {
     text-align: center;
     height: 50px;
     font-size: 11px;
+    margin-left: 5px;
+}
+.enterBox input {
+    width: 40px;
+    background-color:rgba(114, 185, 232, 1); color:white;
 }
 
 .comment-bubble {
@@ -185,10 +188,23 @@ a, a:hover {
 }
 textarea {
     font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .notifications .read{
     background-color: #dddddd;
 }
 .notifications .unread {
     background-color: white;
+}
+
+.im-writing {
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 45px;
+    margin-left: 40px;
+}
+.reply textarea {
+    border-radius: 10px;
+    min-width: 270px;
 }
