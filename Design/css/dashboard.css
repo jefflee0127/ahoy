@@ -9,7 +9,8 @@ a:hover {
 body{
     width: 100%;
     height: 100%;
-    text-align: center;
+    margin:0;
+    padding:0;
 }
 .container {
     margin:0;
@@ -17,6 +18,7 @@ body{
     padding:0;
     width: inherit;
     height: inherit;
+    text-align: left;
 }
 header {
     text-align: center;
@@ -35,7 +37,7 @@ header {
 .logo {
     height: 40px;
     margin: 0;
-    margin-top:10px;
+    margin-top: 10px;
 }
 header img {
     width: 60%;
@@ -43,7 +45,7 @@ header img {
     margin-bottom: 10%;
 }
 .my-account {
-    vertical-align: middle
+    vertical-align: middle;
 }
 .content {
     padding-top: 60px;
@@ -53,11 +55,14 @@ thead {
     background-color: #eeeeee;
 }
 .left-menu {
-    /* box-shadow: 3px 0px 5px gray; */
+    position: fixed;
     padding-bottom: 100%;
     overflow: hidden;
     z-index: 10;
     text-align: left;
+}
+.non-left-menu {
+    float: right;
 }
 table {
     width: 100%;
@@ -76,9 +81,14 @@ table {
     height: inherit;
     padding-right:0;
     border-right: black solid 1px;
+    overflow: scroll;
+    max-height: 100%;
+    float: left
 }
 .right-menu {
     height: inherit;
+    overflow: auto;
+    max-height: 100%;
 }
 .friends-table tr {
     display: grid;
@@ -87,7 +97,6 @@ table {
 .friends-table td {
     display: grid;
     grid-template-columns: 60px 4fr 1fr;
-    overflow: hidden;
     height:100px;
 }
 .friends-table td:hover {

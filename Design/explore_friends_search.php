@@ -13,7 +13,9 @@
         <script src="./js/bootstrap.min.js"></script>
         <!-- Font Awesome -->
         <link rel="stylesheet" href="./css/fontawesome.min.css">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
         <link rel="stylesheet" href="./css/dashboard.css">
         <script src="./js/bg.js"></script>
     </head>
@@ -66,21 +68,22 @@
                 <div class="non-left-menu right-menu col-sm-10">
                     <table class="table friends-table">
                         <thead>
-                            <th>Explore</th>
+                            <th>Search Results for <?php echo $_POST['search']; ?></th>
                             <th class="friend-search">
                               <form method="post" action="explore_friends_search.php">
-                                <input type="text" placeholder="Search.." name="search" class="col-xs-10">
-                                <button type="submit" class="col-xs-2"><i class="fa fa-search"></i></button>
+                                <input type="text" class="searchTerm" placeholder="Search.." name="search">
+                                <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
                               </form>
                             </th>
                         </thead>
                         <?php
+                        $search = $_POST['search'];
                         session_start();
                         $conn = mysqli_connect("localhost", "nardis", "kmlagalbi*01", "nardis");
-                          $sql = "
-                            SELECT * FROM userdata u
-                              WHERE u.id NOT IN (SELECT r.relatedUserID FROM user_relation r WHERE (relatingUserID = '{$_SESSION['id']}' AND isAccepted = 1) OR (relatedUserID = '{$_SESSION['id']}' AND isAccepted = 1))
-                              AND u.id != '{$_SESSION['id']}'";
+                          $sql = "SELECT * FROM userdata u
+                          WHERE u.id NOT IN (SELECT r.relatedUserID FROM user_relation r WHERE (relatingUserID = '{$_SESSION['id']}' AND isAccepted = 1) OR (relatedUserID = '{$_SESSION['id']}' AND isAccepted = 1))
+                          AND u.id != '{$_SESSION['id']}'
+                          AND u.id LIKE '%$search%' ";
                           $result = mysqli_query($conn, $sql);
                         if($result) {
                         while($row = mysqli_fetch_array($result)) {
@@ -185,7 +188,7 @@
                                       <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
                                       <input type="hidden" name = "relatedUserID" value = "<?php echo $row['id']?>">
                                       <input type="hidden" name = "isAccepted" value = "0">
-                                      <button type="submit" class="btn btn-sm btn-success" name="button">Send Request</button>
+                                      <button type="submit"  class="btn btn-sm btn-success" name="button">Send Request</button>
                                     </form>
                                   </div>
                               </div>

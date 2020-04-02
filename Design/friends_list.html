@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
 
         <!-- jQuery library -->
-        <script src="./jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="./js/bootstrap.min.js"></script>
@@ -40,11 +40,10 @@
                     <br> <a href="">Support</a>
                 </div>
                 <div class="col-sm-1 logout">
-                    <br> <a href="logout.php">Log Out</a>
+                    <br> <a href="logout.html">Log Out</a>
                 </div>
             </header>
             <div class="content">
-
                 <div class="left-menu col-sm-2">
                     <table class="table menu-table">
                         <thead></thead>
@@ -55,23 +54,24 @@
                             <td class="non-menu" id="all-comments"> <a href="dashboard.html">All Comments</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu active-table" id="friends-list"><a href="friends_list.php">Me and My Friends</a></td>
+                            <td class="non-menu active-table" id="friends-list"><a href="friends_list.html">Me and My Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="explore-friends"> <a href="explore_friends.php">Explore Friends</a></td>
+                            <td class="non-menu" id="explore-friends"> <a href="explore_friends.html">Explore Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="requests"> <a href="requests.php">Friend Requests</a></td>
+                            <td class="non-menu" id="requests"> <a href="requests.html">Friend Requests</a></td>
                         </tr>
                     </table>
                 </div>
-                <div class="right-menu col-sm-5">
+                <div class="non-left-menu col-sm-10">
+                    <div class="mid-menu col-sm-6">
                     <table class="table profile-table">
                         <thead>
                             <th>My Profile</th>
                             <th></th>
                         </thead>
-                        <?php
+                        <?html
                         session_start();
                         $conn = mysqli_connect(
                           'localhost:3307',
@@ -88,7 +88,7 @@
                                 </div>
                             </td>
                             <td class="col-xs-10">
-                                <h3><?php echo $_SESSION['name']; ?></h3>
+                                <h3><?html echo $_SESSION['name']; ?></h3>
                                 <p style="text-indent:1em"><a href="">Additional Info</a></p>
                             </td>
                         </tr>
@@ -119,12 +119,12 @@
                         </tr>
                     </table>
                 </div>
-                <div class="right-menu col-sm-5">
+                    <div class="right-menu col-sm-6">
                     <table class="table friends-table">
                         <thead>
                             <th>My Friends</th>
                         </thead>
-                        <?php
+                        <?html
                         while($row = mysqli_fetch_array($result)) {
                           $sql2 = "SELECT * FROM userdata WHERE id = '{$row['relatedUserID']}'";
                           $result2 = mysqli_query($conn, $sql2);
@@ -134,14 +134,14 @@
                             <td>
                                 <a href="friend_profile.html"><img src="./images/get_started.png" class="friends-profile">
                                 <div class="friend-name">
-                                    <a href="friend_profile.html"><?php echo $row2['name']; ?></a>
+                                    <a href="friend_profile.html"><?html echo $row2['name']; ?></a>
                                 </div>
                                 <div class="buttons">
                                     <div></div>
                                     <div class="delete-friend">
-                                      <form method="post" action="../backend/nardis_friend/frienddelete.php">
-                                        <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
-                                        <input type="hidden" name = "relatedUserID" value = "<?php echo $row['relatedUserID']?>">
+                                      <form method="post" action="../backend/nardis_friend/frienddelete.html">
+                                        <input type="hidden" name = "relatingUserID" value = "<?html echo $_SESSION['id']?>">
+                                        <input type="hidden" name = "relatedUserID" value = "<?html echo $row['relatedUserID']?>">
                                         <button type="submit" name="button" class="btn btn-danger btn-xs">unfriend</button>
 
                                       </form>
@@ -149,7 +149,7 @@
                                     <div></div>
                                 </div>
                             </td>
-                            <?php
+                            <?html
                             if($row = mysqli_fetch_array($result)) {
                               $sql2 = "SELECT * FROM userdata WHERE id = '{$row['relatedUserID']}'";
                               $result2 = mysqli_query($conn, $sql2);
@@ -158,14 +158,14 @@
                             <td>
                                 <a href="friend_profile.html"><img src="./images/get_started.png" class="friends-profile">
                                 <div class="friend-name">
-                                    <a href="friend_profile.html"><?php echo $row2['name']; ?></a>
+                                    <a href="friend_profile.html"><?html echo $row2['name']; ?></a>
                                 </div>
                                 <div class="buttons">
                                     <div></div>
                                     <div class="delete-friend">
-                                      <form method="post" action="../backend/nardis_friend/frienddelete.php">
-                                        <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
-                                        <input type="hidden" name = "relatedUserID" value = "<?php echo $row['relatedUserID']?>">
+                                      <form method="post" action="../backend/nardis_friend/frienddelete.html">
+                                        <input type="hidden" name = "relatingUserID" value = "<?html echo $_SESSION['id']?>">
+                                        <input type="hidden" name = "relatedUserID" value = "<?html echo $row['relatedUserID']?>">
                                         <button type="submit" name="button" class="btn btn-danger btn-xs">unfriend</button>
 
                                       </form>
@@ -173,14 +173,15 @@
                                     <div></div>
                                 </div>
                             </td>
-                            <?php
+                            <?html
                             }
                             ?>
                         </tr>
-                        <?php
+                        <?html
                         }
                       ?>
                     </table>
+                </div>
                 </div>
             </div>
         </div>

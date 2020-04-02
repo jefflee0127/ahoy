@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
 
         <!-- jQuery library -->
-        <script src="./jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="./js/bootstrap.min.js"></script>
@@ -40,7 +40,7 @@
                     <br> <a href="">Support</a>
                 </div>
                 <div class="col-sm-1 logout">
-                    <br> <a href="logout.php">Log Out</a>
+                    <br> <a href="logout.html">Log Out</a>
                 </div>
             </header>
             <div class="content">
@@ -65,300 +65,302 @@
                         </tr>
                     </table>
                 </div>
-                <div class="right-menu col-sm-5">
-                    <table class="table profile-table">
-                        <thead>
-                            <th>Ytheus's Profile</th>
-                            <th></th>
-                        </thead>
-                        <tr>
-                            <td class="my-profile col-xs-2">
-                                <div style="text-align:center;">
-                                    <img src="./images/get_started.png" id="my-prof-pic">
+                <div class="non-left-menu col-sm-10">
+                    <div class="mid-menu col-sm-6">
+                        <table class="table profile-table">
+                            <thead>
+                                <th>Ytheus's Profile</th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <td class="my-profile col-xs-2">
+                                    <div style="text-align:center;">
+                                        <img src="./images/get_started.png" id="my-prof-pic">
+                                    </div>
+                                </td>
+                                <td class="col-xs-10">
+                                    <h3>Ytheus</h3>
+                                    <p style="text-indent:1em"><a href="">Additional Info</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <div class="col-xs-1">
                                 </div>
-                            </td>
-                            <td class="col-xs-10">
-                                <h3>Ytheus</h3>
-                                <p style="text-indent:1em"><a href="">Additional Info</a></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <div class="col-xs-1">
-                            </div>
-                            <table class="statistics col-xs-10">
-                                <thead>
-                                    <th>Statistics</th><th></th>
-                                </thead>
-                                <tr>
-                                    <td>Comments</td>
-                                    <td>1234</td>
-                                </tr>
-                                <tr>
-                                    <td>Loves Received</td>
-                                    <td>1234</td>
-                                </tr>
-                                <tr>
-                                    <td>Pioneered Websites</td>
-                                    <td>1234</td>
-                                </tr>
-                                <tr>
-                                    <td>Badges</td>
-                                    <td>1234</td>
-                                </tr>
-                            </table>
-                            <div class="col-xs-1">
+                                <table class="statistics col-xs-10">
+                                    <thead>
+                                        <th>Statistics</th><th></th>
+                                    </thead>
+                                    <tr>
+                                        <td>Comments</td>
+                                        <td>1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loves Received</td>
+                                        <td>1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pioneered Websites</td>
+                                        <td>1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Badges</td>
+                                        <td>1234</td>
+                                    </tr>
+                                </table>
+                                <div class="col-xs-1">
 
-                            </div>
-                        </tr>
-                    </table>
-                </div>
-                <div class="right-menu col-sm-5">
-                    <table class="table friends-table">
-                        <thead>
-                            <th style="padding-top:7px; padding-bottom:7px;">
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ytheus's Friends
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Ytheus's Comments</a></li>
-                                        <li><a href="#">Ytheus's Something</a></li>
-                                        <li><a href="#">Ytheus's Dick Size</a></li>
-                                    </ul>
                                 </div>
-                            </th>
-                        </thead>
-                        <tr>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="right-menu col-sm-6">
+                        <table class="table friends-table">
+                            <thead>
+                                <th style="padding-top:7px; padding-bottom:7px;">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ytheus's Friends
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Ytheus's Comments</a></li>
+                                            <li><a href="#">Ytheus's Something</a></li>
+                                            <li><a href="#">Ytheus's Dick Size</a></li>
+                                        </ul>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                </th>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                </td>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                </td>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                </td>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="friend-profile-section">
-                                    <div></div>
-                                    <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
-                                    <div></div>
-                                </div>
-                                <div class="friend-name">
-                                    <div></div>
-                                    <a href="friend_profile.html">Ytheus</a>
-                                    <div></div>
-                                </div>
-                                <div class="buttons">
-                                    <div></div>
-                                    <div class="block-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
                                     </div>
-                                    <div class="report-friend">
-                                        <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
                                     </div>
-                                    <div></div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
+                                    </div>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
+                                    </div>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
+                                    </div>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
+                                    </div>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
+                                    </div>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="friend-profile-section">
+                                        <div></div>
+                                        <a href="friend_profile.html"><img src="/images/get_started.png" class="friends-profile"></a>
+                                        <div></div>
+                                    </div>
+                                    <div class="friend-name">
+                                        <div></div>
+                                        <a href="friend_profile.html">Ytheus</a>
+                                        <div></div>
+                                    </div>
+                                    <div class="buttons">
+                                        <div></div>
+                                        <div class="block-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Block</button>
+                                        </div>
+                                        <div class="report-friend">
+                                            <button class="btn btn-xs btn-danger" type="button" name="button">Report</button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

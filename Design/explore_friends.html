@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
 
         <!-- jQuery library -->
-        <script src="./jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="./js/bootstrap.min.js"></script>
@@ -33,14 +33,12 @@
                        </div>
                     </div> -->
                 </div>
-                <div class="col-sm-2">
-
-                </div>
+                <div class="col-sm-2"></div>
                 <div class="col-sm-1 support">
                     <br> <a href="">Support</a>
                 </div>
                 <div class="col-sm-1 logout">
-                    <br> <a href="logout.php">Log Out</a>
+                    <br> <a href="logout.html">Log Out</a>
                 </div>
             </header>
             <div class="content">
@@ -55,17 +53,17 @@
                             <td class="non-menu" id="all-comments"> <a href="dashboard.html">All Comments</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="friends-list"><a href="friends_list.php">Me and My Friends</a></td>
+                            <td class="non-menu" id="friends-list"><a href="friends_list.html">Me and My Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu active-table" id="explore-friends"> <a href="explore_friends.php">Explore Friends</a></td>
+                            <td class="non-menu active-table" id="explore-friends"> <a href="explore_friends.html">Explore Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="requests"> <a href="requests.php">Friend Requests</a></td>
+                            <td class="non-menu" id="requests"> <a href="requests.html">Friend Requests</a></td>
                         </tr>
                     </table>
                 </div>
-                <div class="right-menu col-sm-10">
+                <div class="non-left-menu right-menu col-sm-10">
                     <table class="table friends-table">
                         <thead>
                             <th>Explore</th>
@@ -78,20 +76,7 @@
                                 </div>
                             </th>
                         </thead>
-                        <?php
-                        session_start();
-                        $conn = mysqli_connect(
-                          'localhost:3307',
-                          'root',
-                          'cw6y9m',
-                          'mention');
-                          $sql = "
-                            SELECT * FROM userdata u
-                              WHERE u.id NOT IN (SELECT r.relatedUserID FROM user_relation r WHERE (relatingUserID = '{$_SESSION['id']}' AND isAccepted = 1) OR (relatedUserID = '{$_SESSION['id']}' AND isAccepted = 1))
-                              AND u.id != '{$_SESSION['id']}'";
-                          $result = mysqli_query($conn, $sql);
 
-                        while($row = mysqli_fetch_array($result)) { ?>
                         <tr>
                             <td>
                                 <div class="ver-align">
@@ -101,15 +86,15 @@
                                 </div>
                                 <div class="friend-name ver-align">
                                     <div></div>
-                                    <a href="https://google.com"><?php echo $row['name']; ?></a>
+                                    <a href="https://google.com"><?html echo $row['name']; ?></a>
                                     <div></div>
                                 </div>
                                 <div class="buttons ver-align">
                                     <div></div>
                                     <div class="add-friend">
-                                      <form method="post" action="../backend/nardis_friend/friendrequest.php">
-                                        <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
-                                        <input type="hidden" name = "relatedUserID" value = "<?php echo $row['id']?>">
+                                      <form method="post" action="../backend/nardis_friend/friendrequest.html">
+                                        <input type="hidden" name = "relatingUserID" value = "<?html echo $_SESSION['id']?>">
+                                        <input type="hidden" name = "relatedUserID" value = "<?html echo $row['id']?>">
                                         <input type="hidden" name = "isAccepted" value = "0">
                                         <button type="submit" class="btn btn-sm btn-success"name="button">Send Request</button>
                                       </form>
@@ -118,7 +103,7 @@
                                 </div>
                             </td>
 
-                        <?php
+                        <?html
                         if($row = mysqli_fetch_array($result)) { ?>
 
                             <td>
@@ -129,15 +114,15 @@
                                 </div>
                                 <div class="friend-name ver-align">
                                     <div></div>
-                                    <a href="https://google.com"><?php echo $row['name']; ?></a>
+                                    <a href="https://google.com"><?html echo $row['name']; ?></a>
                                     <div></div>
                                 </div>
                                 <div class="buttons ver-align">
                                     <div></div>
                                     <div class="add-friend">
-                                      <form method="post" action="../backend/nardis_friend/friendrequest.php">
-                                        <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
-                                        <input type="hidden" name = "relatedUserID" value = "<?php echo $row['id']?>">
+                                      <form method="post" action="../backend/nardis_friend/friendrequest.html">
+                                        <input type="hidden" name = "relatingUserID" value = "<?html echo $_SESSION['id']?>">
+                                        <input type="hidden" name = "relatedUserID" value = "<?html echo $row['id']?>">
                                         <input type="hidden" name = "isAccepted" value = "0">
                                         <button type="submit" class="btn btn-sm btn-success"name="button">Send Request</button>
                                       </form>
@@ -146,11 +131,11 @@
                                 </div>
                             </td>
 
-                        <?php
+                        <?html
                         }
                         ?>
                       </tr>
-                      <?php
+                      <?html
                       }
                       ?>
                     </table>

@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
 
         <!-- jQuery library -->
-        <script src="./jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="./js/bootstrap.min.js"></script>
@@ -40,11 +40,10 @@
                     <br> <a href="">Support</a>
                 </div>
                 <div class="col-sm-1 logout">
-                    <br> <a href="logout.php">Log Out</a>
+                    <br> <a href="logout.html">Log Out</a>
                 </div>
             </header>
             <div class="content">
-
                 <div class="left-menu col-sm-2">
                     <table class="table menu-table">
                         <thead></thead>
@@ -55,58 +54,59 @@
                             <td class="non-menu active-table"><a href="dashboard.html">All Comments</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu"><a href="friends_list.php">Me and My Friends</a></td>
+                            <td class="non-menu"><a href="friends_list.html">Me and My Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="explore-friends"> <a href="explore_friends.php">Explore Friends</a></td>
+                            <td class="non-menu" id="explore-friends"> <a href="explore_friends.html">Explore Friends</a></td>
                         </tr>
                         <tr>
-                            <td class="non-menu" id="requests"> <a href="requests.php">Friend Requests</a></td>
+                            <td class="non-menu" id="requests"> <a href="requests.html">Friend Requests</a></td>
                         </tr>
                     </table>
                 </div>
-                <div class="mid-menu folders col-sm-3">
-                    <table class="table my-comment-table">
-                        <thead>
-                            <th style="padding: 5px;">Sort by time
-                            </th>
-                        </thead>
-                        <tr>
-                            <td class="url-name" id="active-table" onclick="activateTable(this);"> www.google.com </td>
-                        </tr>
-                        <tr>
-                            <td class="url-name" onclick="activateTable(this);"> www.namu.wiki </td>
-                        </tr>
-                        <tr>
-                            <td class="url-name" onclick="activateTable(this);"> www.ilbe.com</td>
-                        </tr>
-                        <tr>
-                            <td class="url-name" onclick="activateTable(this);"> www.minjok.hs.kr </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="right-menu col-sm-7">
-                    <table class="table table-hover specific-comment-table">
-                        <thead>
-                            <th> www.google.com </th>
-                        </thead>
-                        <tr>
-                            <td><a href="http://google.com">세부 url1 <br>
-                            뭐라뭐라뭐라</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://google.com">세부 url2 <br>
-                            뭐라뭐라뭐라</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://google.com">세부 url3 <br>
-                            뭐라뭐라뭐라</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://google.com">세부 url4 <br>
-                            뭐라뭐라뭐라</a></td>
-                        </tr>
-                    </table>
+                <div class="non-left-menu col-sm-10">
+                    <div class="mid-menu folders col-sm-4">
+                        <table class="table my-comment-table">
+                            <thead>
+                                <th style="padding: 5px;">Website</th>
+                            </thead>
+                            <tr>
+                                <td class="url-name" id="active-table" onclick="activateTable(this);"> www.google.com </td>
+                            </tr>
+                            <tr>
+                                <td class="url-name" onclick="activateTable(this);"> www.namu.wiki </td>
+                            </tr>
+                            <tr>
+                                <td class="url-name" onclick="activateTable(this);"> www.ilbe.com</td>
+                            </tr>
+                            <tr>
+                                <td class="url-name" onclick="activateTable(this);"> www.minjok.hs.kr </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="right-menu col-sm-8">
+                        <table class="table table-hover specific-comment-table">
+                            <thead>
+                                <th> www.google.com </th>
+                            </thead>
+                            <tr>
+                                <td><a href="http://google.com">세부 url1 <br>
+                                뭐라뭐라뭐라</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://google.com">세부 url2 <br>
+                                뭐라뭐라뭐라</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://google.com">세부 url3 <br>
+                                뭐라뭐라뭐라</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://google.com">세부 url4 <br>
+                                뭐라뭐라뭐라</a></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

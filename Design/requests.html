@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
 
         <!-- jQuery library -->
-        <script src="./jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="./js/bootstrap.min.js"></script>
@@ -40,7 +40,7 @@
                     <br> <a href="">Support</a>
                 </div>
                 <div class="col-sm-1 logout">
-                    <br> <a href="logout.php">Log Out</a>
+                    <br> <a href="logout.html">Log Out</a>
                 </div>
             </header>
             <div class="content">
@@ -65,12 +65,12 @@
                         </tr>
                     </table>
                 </div>
-                <div class="right-menu col-sm-10">
+                <div class="non-left-menu right-menu col-sm-10">
                     <table class="table friends-table">
                         <thead>
                             <th>Requests</th>
                         </thead>
-                        <?php
+                        <?html
                         session_start();
                         $conn = mysqli_connect(
                           'localhost:3307',
@@ -89,29 +89,29 @@
                                 <a href="#"><img src="./images/get_started.png" class="friends-profile"></a>
                                 <div class="friend-name">
                                     <div></div>
-                                    <a href="https://google.com"><h3><?php echo $row2['name']; ?></h3></a>
+                                    <a href="https://google.com"><h3><?html echo $row2['name']; ?></h3></a>
                                     <div></div>
                                 </div>
                                 <div class="buttons">
                                     <div></div>
                                     <div class="accept-friend">
-                                      <form method="post" action="../backend/narids_friend/friendaccept.php">
-                                        <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
-                                        <input type="hidden" name = "relatedUserID" value = "<?php echo $row['relatingUserID']?>">
+                                      <form method="post" action="../backend/narids_friend/friendaccept.html">
+                                        <input type="hidden" name = "relatingUserID" value = "<?html echo $_SESSION['id']?>">
+                                        <input type="hidden" name = "relatedUserID" value = "<?html echo $row['relatingUserID']?>">
                                         <button type="submit" class="btn btn-xs btn-success" name="button">Accept Request</button>
                                       </form>
                                     </div>
                                     <div class="reject-friend">
-                                      <form method="post" action="../backend/narids_friend/friendreject.php">
-                                        <input type="hidden" name = "relatingUserID" value = "<?php echo $row['relatingUserID']?>">
-                                        <input type="hidden" name = "relatedUserID" value = "<?php echo $_SESSION['id']?>">
+                                      <form method="post" action="../backend/narids_friend/friendreject.html">
+                                        <input type="hidden" name = "relatingUserID" value = "<?html echo $row['relatingUserID']?>">
+                                        <input type="hidden" name = "relatedUserID" value = "<?html echo $_SESSION['id']?>">
                                         <button type="submit" class="btn btn-xs btn-danger" name="button">Reject Request</button>
                                       </form>
                                     </div>
                                     <div></div>
                                 </div>
                             </td>
-                            <?php if($row = mysqli_fetch_array($result)) {
+                            <?html if($row = mysqli_fetch_array($result)) {
                               $sql2 = "SELECT * FROM userdata WHERE id = '{$row['relatingUserID']}'";
                               $result2 = mysqli_query($conn, $sql2);
                               $row2 = mysqli_fetch_array($result2);
@@ -120,33 +120,33 @@
                                   <a href="#"><img src="./images/get_started.png" class="friends-profile"></a>
                                   <div class="friend-name">
                                       <div></div>
-                                      <a href="https://google.com"><h3><?php echo $row2['name']; ?></h3></a>
+                                      <a href="https://google.com"><h3><?html echo $row2['name']; ?></h3></a>
                                       <div></div>
                                   </div>
                                   <div class="buttons">
                                       <div></div>
                                       <div class="accept-friend">
-                                        <form method="post" action="../backend/narids_friend/friendaccept.php">
-                                          <input type="hidden" name = "relatingUserID" value = "<?php echo $_SESSION['id']?>">
-                                          <input type="hidden" name = "relatedUserID" value = "<?php echo $row['relatingUserID']?>">
+                                        <form method="post" action="../backend/narids_friend/friendaccept.html">
+                                          <input type="hidden" name = "relatingUserID" value = "<?html echo $_SESSION['id']?>">
+                                          <input type="hidden" name = "relatedUserID" value = "<?html echo $row['relatingUserID']?>">
                                           <button type="submit" class="btn btn-xs btn-success" name="button">Accept Request</button>
                                         </form>
                                       </div>
                                       <div class="reject-friend">
-                                        <form method="post" action="../backend/narids_friend/friendreject.php">
-                                          <input type="hidden" name = "relatingUserID" value = "<?php echo $row['relatingUserID']?>">
-                                          <input type="hidden" name = "relatedUserID" value = "<?php echo $_SESSION['id']?>">
+                                        <form method="post" action="../backend/narids_friend/friendreject.html">
+                                          <input type="hidden" name = "relatingUserID" value = "<?html echo $row['relatingUserID']?>">
+                                          <input type="hidden" name = "relatedUserID" value = "<?html echo $_SESSION['id']?>">
                                           <button type="submit" class="btn btn-xs btn-danger" name="button">Reject Request</button>
                                         </form>
                                       </div>
                                       <div></div>
                                   </div>
                               </td>
-                            <?php
+                            <?html
                             }
                             ?>
                           </tr>
-                          <?php
+                          <?html
                           }
                           ?>
 
