@@ -12,7 +12,7 @@
         <!-- Latest compiled JavaScript -->
         <script src="./js/bootstrap.min.js"></script>
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="./css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
         <link rel="stylesheet" href="./css/popup.css">
         <script type="text/javascript" src="./js/popup.js"></script>
@@ -20,33 +20,26 @@
     </head>
 
     <body>
-        <!-- <script src="./js/background.js"></script> -->
-        <div class="pub container" id="content">
+        <div class="container" id="content">
             <header>
-                <div>
-                    <!-- <ul class="breadcrumb">
-                        <li class="breadcrumb-item">Public</li>
-                        <li class="breadcrumb-item"><a href="popup_com_pri.html">Private</a></li>
-                    </ul> -->
-                    <div class="top-button my-account">
-                        <a href="dashboard.html" target="_blank">
-                            <button type="button" class="btn" name="button">Ytheus</button>
-                        </a>
-                    </div>
+                <div class="top-button">
+                    <button class="btn" type="button"><i class="fas fa-comments"></i></button>
                 </div>
-                <div>
-                    <div class="top-button noti-button">
-                        <a href="popup_not.html">
-                            <button type="button" class="btn" name="button">Notification</button>
-                        </a>
-                    </div>
+                <div class="top-button">
+                    <button class="btn top-button" type="button"><i class="fas fa-home"></i></button>
                 </div>
-                <div>
-                    <div class="top-button log-out-button">
-                        <a href="signUp.html" target="_blank">
-                            <button type="button" class="btn" name="button">Log Out</button>
-                        </a>
-                    </div>
+                <div class="top-button">
+                    <button class="btn top-button" type="button"><i class="fas fa-bell"></i></button>
+                </div>
+                <div class="dropdown top-button">
+                    <button class="btn dropdown-toggle top-button" type="button" data-toggle="dropdown"><i class="fas fa-sliders-h"></i>
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu" id="dash-or-logout">
+                        <li>Ytheus</li>
+                        <li class="divider"></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
                 </div>
             </header>
 
@@ -67,7 +60,6 @@
                                 <div class="btn-group-sm">
                                     <button type="button" class="btn btn-sm love">Love</button>
                                     <button type="button" class="btn btn-sm view-replies" value="view-replies" onclick="viewToggle(this)">View Replies</button>
-                                    <button type="button" class="btn btn-sm leave-reply" onclick="replyToggle()">Reply</button>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +79,6 @@
                                 <div class="love-or-replies">
                                     <div class="btn-group-sm">
                                         <button type="button" class="btn btn-sm love">Love</button>
-                                        <button type="button" class="btn btn-sm leave-reply">Reply</button>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +97,6 @@
                                 <div class="love-or-replies">
                                     <div class="btn-group-sm">
                                         <button type="button" class="btn btn-sm love">Love</button>
-                                        <button type="button" class="btn btn-sm leave-reply">Reply</button>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +126,6 @@
                                 <div class="btn-group-sm">
                                     <button type="button" class="btn btn-sm love">Love</button>
                                     <button type="button" style="z-index:10;" class="btn btn-sm" value="view-replies" onclick="viewToggle(this)">View Replies</button>
-                                    <button type="button" class="btn btn-sm leave-reply" onclick="replyToggle()">Reply</button>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +144,6 @@
                             <div class="love-or-replies">
                                 <div class="btn-group-sm">
                                     <button type="button" class="btn btn-sm love">Love</button>
-                                    <button type="button" class="btn btn-sm leave-reply">Reply</button>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +166,6 @@
                                 <div class="btn-group-sm">
                                     <button type="button" class="btn btn-sm love">Love</button>
                                     <button type="button" class="btn btn-sm view-replies">View Replies</button>
-                                    <button type="button" class="btn btn-sm leave-reply">Reply</button>
                                 </div>
                             </div>
                         </div>
@@ -187,8 +174,13 @@
             </div>
             <footer>
                 <div class="myComm">
+                    <div></div>
+                    <div style="color:white;">
+                        <input type="checkbox" id="private-box" value="private">
+                        <label for="private-box"></label>
+                    </div>
                     <div class="profileSection" id="my-profile-section">
-                        <a href="https://facebook.com"><img src="/images/get_started.png" class="profilePic"></a>
+                        <img src="/images/get_started.png" class="profilePic">
                     </div>
                     <div class="commentSection">
                         <textarea id="my-comment-box" rows="2" placeholder="Comment..."></textarea>
