@@ -141,6 +141,10 @@ header .top-button .btn:hover {
 #my-comment-box {
     border-radius: 10px;
     display: inline;
+    min-width: 305px;
+    max-width: 305px;
+    min-height: 50px;
+    max-height: 50px;
 }
 .enterBox {
     text-align: center;
@@ -204,7 +208,10 @@ textarea {
     grid-template-columns: 1fr 45px;
     margin-left: 40px;
 }
-.reply textarea {
+.im-writing textarea {
     border-radius: 10px;
     min-width: 270px;
+    max-width: 270px;
+    min-height: 50px;
+    max-height: 50px;
 }

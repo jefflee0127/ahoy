@@ -13,29 +13,19 @@
         <script src="./js/bootstrap.min.js"></script>
         <!-- Font Awesome -->
         <link rel="stylesheet" href="./css/fontawesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
-        <link rel="stylesheet" href="./css/dashboard.css">
+        <link rel="stylesheet" href="dashboard.css">
         <script src="./js/bg.js"></script>
     </head>
     <body>
         <div class="container">
             <header>
                 <div class="col-sm-2 logo-part">
-                    <h2 style="font-family:'Courier New'; margin:0;">Nardis<h2>
+                    <img src="./images/logo.png" class="logo">
                 </div>
-                <div class="col-sm-6">
-                    <!-- <div class="wrap">
-                       <div class="search">
-                          <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                          <button type="submit" class="searchButton">
-                            <i class="fa fa-search"></i>
-                         </button>
-                       </div>
-                    </div> -->
-                </div>
-                <div class="col-sm-2"></div>
+                <div class="col-sm-8"></div>
                 <div class="col-sm-1 support">
                     <br><a href="">Support</a>
                 </div>
@@ -44,7 +34,6 @@
                 </div>
             </header>
             <div class="content">
-
                 <div class="left-menu col-sm-2">
                     <table class="table menu-table">
                         <thead></thead>
@@ -68,9 +57,9 @@
                 <div class="non-left-menu right-menu col-sm-10">
                     <table class="table friends-table">
                         <thead>
-                            <th>Search Results for <?php echo $_POST['search']; ?></th>
+                            <th>Explore</th>
                             <th class="friend-search">
-                              <form method="post" action="explore_friends_search.php">
+                              <form method="post" action="explore_friends_search.php" id="friend-search-box">
                                 <input type="text" class="searchTerm" placeholder="Search.." name="search">
                                 <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
                               </form>

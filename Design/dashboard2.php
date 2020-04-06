@@ -16,25 +16,20 @@
           <script src="./js/bootstrap.min.js"></script>
           <!-- Font Awesome -->
           <link rel="stylesheet" href="./css/fontawesome.min.css">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
 
-          <link rel="stylesheet" href="./css/dashboard.css">
+          <link rel="stylesheet" href="dashboard.css">
           <script src="./js/bg.js"></script>
       </head>
     <body>
         <div class="container">
             <header>
-                <div class="col-sm-2 logo">
-                    <h2 style="font-family:'Courier New'; margin:0;">Nardis<h2>
+                <div class="col-sm-2 logo-part">
+                    <img src="./images/logo.png" class="logo">
                 </div>
-                <div class="col-sm-6">
-                    <!-- asdjlflahkjf -->
-                </div>
-                <div class="col-sm-2">
-
-                </div>
+                <div class="col-sm-8"></div>
                 <div class="col-sm-1 support">
                     <br> <a href="">Support</a>
                 </div>
@@ -43,7 +38,6 @@
                 </div>
             </header>
             <div class="content">
-
                 <div class="left-menu col-sm-2">
                     <table class="table menu-table">
                         <thead></thead>
@@ -64,32 +58,34 @@
                         </tr>
                     </table>
                 </div>
-                <div class="mid-menu folders col-sm-5">
-                    <table>
-                        <thead>
-                            <th style="padding: 5px;">
-                                  <button><a href = "dashboard.php">Check All Comments</a></button>
-                                </div>
-                            </th>
-                        </thead>
-                        <tbody id = "alertarea">
-                        </tbody>
-                    </table>
+                <div class="non-left-menu col-sm-10">
+                    <div class="mid-menu folders col-sm-6">
+                        <table class="table">
+                            <thead>
+                                <th style="padding: 5px;">
+                                      <button><a href = "dashboard.php">Check All Comments</a></button>
+                                    </div>
+                                </th>
+                            </thead>
+                            <tbody id = "alertarea">
+                            </tbody>
+                        </table>
 
-                </div>
-                <div class="right-menu col-sm-5">
-                    <table>
-                        <thead>
-                            <th> Comment Log
-                            <button><a id = "newurl" href = "">Visit Website</a></button>
-                            </th>
-                        </thead>
+                    </div>
+                    <div class="right-menu col-sm-6">
+                        <table class="table">
+                            <thead>
+                                <th> Comment Log
+                                <button><a id = "newurl" href = "">Visit Website</a></button>
+                                </th>
+                            </thead>
 
-                          <tbody id = "commentarea">
-                          </tbody>
+                              <tbody id = "commentarea">
+                              </tbody>
 
 
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

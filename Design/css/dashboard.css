@@ -79,7 +79,7 @@ table {
 }
 .mid-menu {
     height: inherit;
-    padding-right:0;
+    padding:0;
     border-right: black solid 1px;
     overflow: scroll;
     max-height: 100%;
@@ -88,6 +88,7 @@ table {
 .right-menu {
     height: inherit;
     overflow: auto;
+    padding: none;
     max-height: 100%;
 }
 .friends-table tr {
@@ -130,6 +131,7 @@ table {
 }
 .buttons .btn {
     width: 100px;
+    text-align: center;
 }
 .right-menu .friend-search {
     display: grid;
