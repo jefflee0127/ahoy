@@ -23,13 +23,13 @@
         <div class="container" id="content">
             <header>
                 <div class="top-button">
-                    <button class="btn" type="button"><i class="fas fa-comments"></i></button>
+                    <a href="popup_1.html"><button class="btn top-button" type="button"><i class="fas fa-comments"></i></button></a>
                 </div>
                 <div class="top-button">
-                    <button class="btn top-button" type="button"><i class="fas fa-home"></i></button>
+                    <a href="popup_2.html"><button class="btn top-button" type="button"><i class="fas fa-home"></i></button></a>
                 </div>
                 <div class="top-button">
-                    <button class="btn top-button" type="button"><i class="fas fa-bell"></i></button>
+                    <a href="popup_3.html"><button class="btn top-button" type="button"><i class="fas fa-bell"></i></button></a>
                 </div>
                 <div class="dropdown top-button">
                     <button class="btn dropdown-toggle top-button" type="button" data-toggle="dropdown"><i class="fas fa-sliders-h"></i>
@@ -42,7 +42,6 @@
                     </ul>
                 </div>
             </header>
-
             <div class="existingComm">
                 <div class="eachComm">
                     <div class="not-reply">
@@ -175,9 +174,15 @@
             <footer>
                 <div class="myComm">
                     <div></div>
-                    <div style="color:white;">
+                    <div>
                         <input type="checkbox" id="private-box" value="private">
                         <label for="private-box"></label>
+                            <h4 style="display:inline">
+                                Private
+                                <i class="fas fa-question-circle" name="hello"id="what-is-private"></i></h4>
+                            <div class="help-text" style="display:inline">
+                                only you can see it
+                            </div>
                     </div>
                     <div class="profileSection" id="my-profile-section">
                         <img src="/images/get_started.png" class="profilePic">

@@ -7,44 +7,39 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
 
         <!-- jQuery library -->
-        <script src="./jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="./js/bootstrap.min.js"></script>
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="./css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
         <link rel="stylesheet" href="./css/popup.css">
-        <script src="./js/popup.js"></script>
+        <script type="text/javascript" src="./js/popup.js"></script>
+
     </head>
 
     <body>
         <div class="container" id="content">
             <header>
-                <div>
-                    <!-- <ul class="breadcrumb">
-                        <li class="breadcrumb-item">Public</li>
-                        <li class="breadcrumb-item"><a href="popup_com_pri.html">Private</a></li>
-                    </ul> -->
-                    <div class="top-button my-account">
-                        <a href="dashboard.html" target="_blank">
-                            <button type="button" class="btn" name="button">Ytheus</button>
-                        </a>
-                    </div>
+                <div class="top-button">
+                    <a href="popup_1.html"><button class="btn top-button" type="button"><i class="fas fa-comments"></i></button></a>
                 </div>
-                <div>
-                    <div class="top-button noti-button">
-                        <a href="popup_com.html">
-                            <button type="button" class="btn" name="button">Comments</button>
-                        </a>
-                    </div>
+                <div class="top-button">
+                    <a href="popup_2.html"><button class="btn top-button" type="button"><i class="fas fa-home"></i></button></a>
                 </div>
-                <div>
-                    <div class="top-button log-out-button">
-                        <a href="signUp.html" target="_blank">
-                            <button type="button" class="btn" name="button">Log Out</button>
-                        </a>
-                    </div>
+                <div class="top-button">
+                    <a href="popup_3.html"><button class="btn top-button" type="button"><i class="fas fa-bell"></i></button></a>
+                </div>
+                <div class="dropdown top-button">
+                    <button class="btn dropdown-toggle top-button" type="button" data-toggle="dropdown"><i class="fas fa-sliders-h"></i>
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu" id="dash-or-logout">
+                        <li>Ytheus</li>
+                        <li class="divider"></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
                 </div>
             </header>
             <div class="notifications">
