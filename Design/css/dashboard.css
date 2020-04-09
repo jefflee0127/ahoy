@@ -74,9 +74,6 @@ table {
 .menu-table .non-menu {
     text-indent: 1em;
 }
-.menu-table .non-menu:hover{
-    box-shadow: 1px 1px 2px 2px gray inset;
-}
 .mid-menu {
     height: inherit;
     padding:0;
@@ -99,9 +96,6 @@ table {
     display: grid;
     grid-template-columns: 60px 4fr 1fr;
     height:100px;
-}
-.friends-table td:hover {
-    box-shadow: 1px 1px 2px 2px gray inset;
 }
 .friends-table .friend-name {
     padding: 5%;
@@ -164,9 +158,6 @@ table {
 .url-name {
     word-break: keep-all;
 }
-.url-name:hover {
-    box-shadow: 1px 1px 2px 2px gray inset;
-}
 .my-friends-menu .friends-profile {
 
     /* width: 100%; */
@@ -174,13 +165,8 @@ table {
 
 
 .active-table {
-    box-shadow: 1px 1px 2px 2px gray inset;
+    background-color: #eeeeee
 }
-#active-table {
-    box-shadow: 1px 1px 2px 2px gray inset;
-}
-
-
 .search {
   width: 100%;
   position: relative;
@@ -237,4 +223,14 @@ table {
 .ver-align {
     display: grid;
     grid-template-rows: auto;
+}
+.load-more {
+    color: gray;
+    text-align: center;
+}
+.load-more:hover {
+    text-decoration: underline;
+}
+.dropdown-menu li {
+    height: 130px;
 }

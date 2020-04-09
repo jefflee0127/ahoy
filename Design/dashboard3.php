@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
   <?php
   session_start();
-  if(isset($_SESSION['id']))
-  {
   ?>
       <head>
           <meta charset="utf-8">
@@ -22,6 +19,7 @@
           <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
+
           <link rel="stylesheet" href="dashboard.css">
           <script src="./js/bg.js"></script>
       </head>
@@ -31,8 +29,7 @@
                 <div class="col-sm-2 logo-part">
                     <img src="./images/logo.png" class="logo">
                 </div>
-                <div class="col-sm-8">
-                </div>
+                <div class="col-sm-8"></div>
                 <div class="col-sm-1 support">
                     <br> <a href="">Support</a>
                 </div>
@@ -63,16 +60,12 @@
                 </div>
                 <div class="non-left-menu col-sm-10">
                     <div class="mid-menu folders col-sm-6">
-                        <table class="table my-comment-table">
+                        <table class="table">
                             <thead>
                                 <th style="padding: 5px;">
-                                    <div style="text-align: left; display: inline;">
-                                        Notifications
-                                    </div>
-                                    <div style="text-align:right; display:inline;">
-                                        <button><a href = "dashboard2.php">Check My Comments</a></button>
-                                        <button><a href = "dashboard3.php">Check Private Comments</a></button>
-                                    </div>
+                                      Notifications
+                                      <button><a href = "dashboard.php">Check All Comments</a></button>
+                                      <button><a href = "dashboard3.php">Check My Comments</a></button>
                                 </th>
                             </thead>
                             <tbody id = "alertarea">
@@ -94,8 +87,8 @@
                         </table>
                     </div>
                 </div>
+              </div>
             </div>
-        </div>
     </body>
     <?php
     $id = $_SESSION['id'];
@@ -104,7 +97,7 @@
     function getNotif(id, alertarea) {
       hr = new XMLHttpRequest();
       var info="id="+id;
-      hr.open("POST", "http://nardis.dothome.co.kr/nardis_core/notif_load2.php", true);
+      hr.open("POST", "http://nardis.dothome.co.kr/nardis_core/notif_load_private2.php", true);
       hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       hr.onload = () => {
         const data = hr.responseText;
@@ -126,7 +119,7 @@
           hr2 = new XMLHttpRequest();
           var info="link="+link;
           //console.log(info);
-          hr2.open("POST", "http://nardis.dothome.co.kr/nardis_core/comment_load2.php", true);
+          hr2.open("POST", "http://nardis.dothome.co.kr/nardis_core/comment_load_private2.php", true);
           hr2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           hr2.onload = () => {
             const data = hr2.responseText;
@@ -145,7 +138,7 @@
             hr3 = new XMLHttpRequest();
             var info="link="+link;
             //console.log(info);
-            hr3.open("POST", "http://nardis.dothome.co.kr/nardis_core/comment_load2.php", true);
+            hr3.open("POST", "http://nardis.dothome.co.kr/nardis_core/comment_load_private2.php", true);
             hr3.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             hr3.onload = () => {
               const data = hr3.responseText;
@@ -175,14 +168,6 @@
       newurl.innerHTML=n;
       $("#newurl").attr("href", url_input);
     }
-    <?php
-    }
-    else
-     {
-      echo("Go fuck yourself");
-      header('Location: http://nardis.dothome.co.kr/');
-      }
-    ?>
 
   </script>
 </html>

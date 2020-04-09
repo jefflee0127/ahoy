@@ -260,12 +260,12 @@ input[id="private-box"] {
     border-bottom: black solid 1px;
     padding: 10px;
 }
-.thumbnail {
+.thmbnl {
     width: 100px;
     height: auto;
     display: inline;
 }
-.thumbnail img {
+.thmbnl img {
     width: 100px;
     height: auto;
     display: inline;
@@ -276,4 +276,7 @@ input[id="private-box"] {
     background: rgba(0, 0, 0, 0);
     color: black;
     font-weight: normal;
+}
+.posts input[id="private-box"]:checked + label {
+	background-color: #000000;
 }

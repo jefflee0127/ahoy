@@ -63,14 +63,14 @@
                         <table class="table">
                             <thead>
                                 <th style="padding: 5px;">
+                                      Notifications
                                       <button><a href = "dashboard.php">Check All Comments</a></button>
-                                    </div>
+                                      <button><a href = "dashboard3.php">Check Private Comments</a></button>
                                 </th>
                             </thead>
                             <tbody id = "alertarea">
                             </tbody>
                         </table>
-
                     </div>
                     <div class="right-menu col-sm-6">
                         <table class="table">
@@ -87,8 +87,8 @@
                         </table>
                     </div>
                 </div>
+              </div>
             </div>
-        </div>
     </body>
     <?php
     $id = $_SESSION['id'];

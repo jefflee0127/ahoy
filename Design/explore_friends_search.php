@@ -69,10 +69,11 @@
                         $search = $_POST['search'];
                         session_start();
                         $conn = mysqli_connect("localhost", "nardis", "kmlagalbi*01", "nardis");
+                        $filtered_search = mysqli_real_escape_string($conn, $search);
                           $sql = "SELECT * FROM userdata u
                           WHERE u.id NOT IN (SELECT r.relatedUserID FROM user_relation r WHERE (relatingUserID = '{$_SESSION['id']}' AND isAccepted = 1) OR (relatedUserID = '{$_SESSION['id']}' AND isAccepted = 1))
                           AND u.id != '{$_SESSION['id']}'
-                          AND u.id LIKE '%$search%' ";
+                          AND u.id LIKE '%$filtered_search%' ";
                           $result = mysqli_query($conn, $sql);
                         if($result) {
                         while($row = mysqli_fetch_array($result)) {
