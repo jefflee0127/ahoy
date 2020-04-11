@@ -234,3 +234,7 @@ table {
 .dropdown-menu li {
     height: 130px;
 }
+
+.load-more:hover, .url-name:hover {
+    cursor: pointer;
+}
